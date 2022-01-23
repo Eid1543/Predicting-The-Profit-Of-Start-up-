@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predicting Site</title>
+
+</head>
+
+ <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> Profit Detection </h1><br>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" , method="POST" >
+    
+    
+   <b> The state(New York/California/Florida):  <input type="text", name='a', placeholder="case senstive" required="required" /> <br><br>
+       R&D spend:  <input type="text", name='b', placeholder="" required="required" /> <br><br>
+       Admin. spend:  <input type="text", name='c', placeholder="" required="required" /> <br><br>
+       Marketing spend: <input type="text", name='d', placeholder="" required="required" /> <br><br><br></b>
+            
+        <button type="submit">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+  </center>
+
+
+</body>
+</html>
+
+
+
+        
+        
+        
+
+   
